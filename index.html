@@ -584,161 +584,6 @@
         box-shadow: 0 0 10px var(--primary-color);
     }
 
-    /* ===== SKILLS SECTION ===== */
-    .skills-section {
-        padding-top: 70px;
-        max-width: 1200px;
-        margin: auto;
-        position: relative;
-        animation: fadeInUp 1s ease-out forwards;
-        z-index: 10;
-    }
-
-    .skills-title {
-        font-family: 'Orbitron', sans-serif;
-        font-size: 40px;
-        margin: 0;
-        color: var(--primary-color);
-        text-align: left;
-        text-transform: uppercase;
-        letter-spacing: 2px;
-        position: relative;
-        display: inline-block;
-        width: 100%;
-    }
-
-    .skills-container {
-        display: grid;
-        grid-template-columns: repeat(3, 1fr);
-        gap: 60px;
-        margin-top: 50px;
-    }
-
-    .skill-card {
-        width: 300px;
-        background: rgba(18, 118, 158, 0.05);
-        border: 1px solid rgba(18, 118, 158, 0.2);
-        border-radius: 15px;
-        padding: 25px;
-        transition: all 0.3s ease;
-        animation: fadeInUp 0.8s ease-out forwards;
-        opacity: 0;
-    }
-
-    .skill-card:nth-child(1) {
-        animation-delay: 0.2s;
-    }
-
-    .skill-card:nth-child(2) {
-        animation-delay: 0.4s;
-    }
-
-    .skill-card:nth-child(3) {
-        animation-delay: 0.6s;
-    }
-
-    .skill-card:nth-child(4) {
-        animation-delay: 0.8s;
-    }
-
-    .skill-card:nth-child(5) {
-        animation-delay: 1s;
-    }
-
-    .skill-card:nth-child(6) {
-        animation-delay: 1.2s;
-    }
-
-    @keyframes fadeInUp {
-        from {
-            opacity: 0;
-            transform: translateY(30px);
-        }
-
-        to {
-            opacity: 1;
-            transform: translateY(0);
-        }
-    }
-
-    .skill-card:hover {
-        background: rgba(18, 118, 158, 0.1);
-        border-color: rgba(38, 164, 214, 0.4);
-        box-shadow: 0 10px 30px rgba(18, 118, 158, 0.2);
-        transform: translateY(-5px);
-    }
-
-    .skill-header {
-        display: flex;
-        align-items: center;
-        gap: 12px;
-        margin-bottom: 15px;
-    }
-
-    .skill-icon {
-        width: 40px;
-        height: 40px;
-        display: flex;
-        align-items: center;
-        justify-content: center;
-        background: rgba(38, 164, 214, 0.2);
-        border-radius: 10px;
-        color: var(--primary-color);
-        font-size: 20px;
-        transition: all 0.3s ease;
-    }
-
-    .skill-card:hover .skill-icon {
-        background: rgba(38, 164, 214, 0.4);
-        transform: scale(1.1) rotate(10deg);
-    }
-
-    .skill-name {
-        font-family: 'Orbitron', sans-serif;
-        font-size: 18px;
-        color: var(--primary-color);
-        margin: 0;
-        font-weight: bold;
-    }
-
-    .skill-percentage {
-        font-size: 13px;
-        color: rgba(255, 255, 255, 0.7);
-        margin-left: auto;
-    }
-
-    .skill-bar {
-        width: 100%;
-        height: 8px;
-        background: rgba(18, 118, 158, 0.1);
-        border-radius: 10px;
-        overflow: hidden;
-        margin-top: 10px;
-        border: 1px solid rgba(18, 118, 158, 0.2);
-    }
-
-    .skill-progress {
-        height: 100%;
-        background: linear-gradient(90deg, #12769E, #26a4d6);
-        border-radius: 10px;
-        transition: width 0.6s cubic-bezier(0.34, 1.56, 0.64, 1);
-        box-shadow: 0 0 10px rgba(38, 164, 214, 0.6);
-        animation: glow 2s ease-in-out infinite;
-        width: 0%;
-    }
-
-    @keyframes glow {
-
-        0%,
-        100% {
-            box-shadow: 0 0 10px rgba(38, 164, 214, 0.6);
-        }
-
-        50% {
-            box-shadow: 0 0 20px rgba(38, 164, 214, 0.9);
-        }
-    }
-
     footer {
         background-color: var(--background-color);
         margin-top: 80px;
@@ -783,7 +628,7 @@
         <i class="fa-solid fa-shield-halved fa-2x"></i>
         <nav>
             <a href="">01. <span>About</span></a>
-            <a href="#skill">02. <span>Skill</span></a>
+            <a href="">02. <span>Skill</span></a>
             <a href="">03. <span>Work</span></a>
             <a href="" class="resume">Contact</a>
         </nav>
@@ -820,101 +665,6 @@
             </ul>
         </div>
     </section>
-    <div id="skill" class="skills-section">
-        <h2 class="skills-title">Skill</h2>
-        <div class="skills-container">
-            <div class="skill-card">
-                <div class="skill-header">
-                    <div class="skill-icon">
-                        <i class="fa-brands fa-python"></i>
-                    </div>
-                    <h3 class="skill-name">Python</h3>
-                    <span class="skill-percentage">80%</span>
-                </div>
-                <div class="skill-bar">
-                    <div class="skill-progress" style="width: 80%"></div>
-                </div>
-            </div>
-
-            <div class="skill-card">
-                <div class="skill-header">
-                    <div class="skill-icon">
-                        <i class="fa-brands fa-js"></i>
-                    </div>
-                    <h3 class="skill-name">JavaScript</h3>
-                    <span class="skill-percentage">75%</span>
-                </div>
-                <div class="skill-bar">
-                    <div class="skill-progress" style="width: 75%"></div>
-                </div>
-            </div>
-
-            <div class="skill-card">
-                <div class="skill-header">
-                    <div class="skill-icon">
-                        <i class="fa-brands fa-java"></i>
-                    </div>
-                    <h3 class="skill-name">Java</h3>
-                    <span class="skill-percentage">55%</span>
-                </div>
-                <div class="skill-bar">
-                    <div class="skill-progress" style="width: 55%"></div>
-                </div>
-            </div>
-
-            <div class="skill-card">
-                <div class="skill-header">
-                    <div class="skill-icon">
-                        <i class="fa-brands fa-html5"></i>
-                    </div>
-                    <h3 class="skill-name">HTML/CSS</h3>
-                    <span class="skill-percentage">90%</span>
-                </div>
-                <div class="skill-bar">
-                    <div class="skill-progress" style="width: 90%"></div>
-                </div>
-            </div>
-
-            <div class="skill-card">
-                <div class="skill-header">
-                    <div class="skill-icon">
-                        <i class="fa-brands fa-php"></i>
-                    </div>
-                    <h3 class="skill-name">PHP</h3>
-                    <span class="skill-percentage">45%</span>
-                </div>
-                <div class="skill-bar">
-                    <div class="skill-progress" style="width: 45%"></div>
-                </div>
-            </div>
-
-            <div class="skill-card">
-                <div class="skill-header">
-                    <div class="skill-icon">
-                        <i class="fa-brands fa-react"></i>
-                    </div>
-                    <h3 class="skill-name">React</h3>
-                    <span class="skill-percentage">65%</span>
-                </div>
-                <div class="skill-bar">
-                    <div class="skill-progress" style="width: 65%"></div>
-                </div>
-            </div>
-
-            <div class="skill-card">
-                <div class="skill-header">
-                    <div class="skill-icon">
-                        <i class="fa-solid fa-computer"></i>
-                    </div>
-                    <h3 class="skill-name">Pentest</h3>
-                    <span class="skill-percentage">45%</span>
-                </div>
-                <div class="skill-bar">
-                    <div class="skill-progress" style="width: 45%"></div>
-                </div>
-            </div>
-        </div>
-    </div>
 
     <footer>
         <div class="footer-bottom">
@@ -967,12 +717,6 @@
         });
 
         // Animation des barres de compétences
-        const skillBars = document.querySelectorAll('.skill-progress');
-        const observerOptions = {
-            threshold: 0.5,
-            rootMargin: '0px 0px -50px 0px'
-        };
-
         const observer = new IntersectionObserver((entries) => {
             entries.forEach(entry => {
                 if (entry.isIntersecting) {
@@ -988,8 +732,6 @@
                 }
             });
         }, observerOptions);
-
-        skillBars.forEach(bar => observer.observe(bar));
     </script>
 </body>
 
