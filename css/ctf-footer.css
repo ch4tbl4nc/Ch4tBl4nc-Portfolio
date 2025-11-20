@@ -1,0 +1,314 @@
+/* ==========================================
+   SECTION CTF PLATFORMS
+   ========================================== */
+
+.section-ctf {
+    max-width: 1200px;
+    margin: 0 auto;
+    margin-top: 5vh;
+    padding: 0 20px;
+}
+
+.section-ctf .section-header {
+    text-align: center;
+    margin-bottom: 80px;
+    position: relative;
+    z-index: 1;
+}
+
+.section-ctf .section-subtitle {
+    color: rgba(255, 255, 255, 0.7);
+    font-size: 18px;
+    margin-top: 16px;
+    font-weight: 300;
+    letter-spacing: 0.5px;
+}
+
+/* ==========================================
+   GRILLE DES CARTES CTF
+   ========================================== */
+
+.ctf-grid {
+    display: grid;
+    grid-template-columns: repeat(3, minmax(350px, 1fr));
+    gap: 40px;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px;
+}
+
+.ctf-card {
+    position: relative;
+    background: rgba(255, 255, 255, 0.02);
+    border-radius: 20px;
+    padding: 40px 30px;
+    border: 1px solid rgba(255, 255, 255, 0.05);
+    transition: all 0.4s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+    overflow: hidden;
+    backdrop-filter: blur(10px);
+    cursor: pointer;
+}
+
+.ctf-card-bg {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: linear-gradient(135deg, 
+        rgba(18, 118, 158, 0.03) 0%, 
+        rgba(18, 118, 158, 0.01) 100%);
+    opacity: 0;
+    transition: opacity 0.4s ease;
+}
+
+.ctf-card:hover .ctf-card-bg {
+    opacity: 1;
+}
+
+.ctf-card:hover {
+    transform: translateY(-12px);
+    border-color: rgba(18, 118, 158, 0.3);
+    box-shadow: 
+        0 25px 50px rgba(0, 0, 0, 0.3),
+        0 0 40px rgba(18, 118, 158, 0.1);
+}
+
+.ctf-card-content {
+    position: relative;
+    z-index: 2;
+    text-align: center;
+}
+
+/* ==========================================
+   LOGOS ET ICÔNES CTF
+   ========================================== */
+
+.ctf-logo {
+    width: 80px;
+    height: 80px;
+    margin: 0 auto 30px;
+    background: linear-gradient(135deg, var(--primary-color), rgba(18, 118, 158, 0.8));
+    border-radius: 20px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 32px;
+    color: white;
+    transition: all 0.4s ease;
+    box-shadow: 0 10px 30px rgba(18, 118, 158, 0.2);
+    position: relative;
+    overflow: hidden;
+}
+
+.ctf-logo::before {
+    content: '';
+    position: absolute;
+    top: -50%;
+    left: -50%;
+    width: 200%;
+    height: 200%;
+    background: linear-gradient(45deg, transparent, rgba(255, 255, 255, 0.1), transparent);
+    transform: rotate(-45deg);
+    transition: transform 0.6s ease;
+}
+
+.ctf-card:hover .ctf-logo::before {
+    transform: rotate(-45deg) translate(100%, 100%);
+}
+
+.ctf-card:hover .ctf-logo {
+    transform: scale(1.1) rotate(5deg);
+    box-shadow: 0 15px 40px rgba(18, 118, 158, 0.4);
+}
+
+.platform-title {
+    font-family: var(--font-primary);
+    font-size: 24px;
+    font-weight: 700;
+    color: white;
+    margin: 0 0 25px 0;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+}
+
+/* ==========================================
+   MÉTRIQUES CTF
+   ========================================== */
+
+.ctf-metrics {
+    display: flex;
+    justify-content: space-around;
+    margin: 30px 0;
+    gap: 20px;
+}
+
+.metric {
+    text-align: center;
+    flex: 1;
+}
+
+.metric-value {
+    display: block;
+    font-family: var(--font-primary);
+    font-size: 28px;
+    font-weight: 700;
+    color: var(--primary-color);
+    line-height: 1;
+    margin-bottom: 8px;
+    text-shadow: 0 0 20px rgba(18, 118, 158, 0.5);
+}
+
+.metric-label {
+    font-size: 12px;
+    color: rgba(255, 255, 255, 0.6);
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    font-weight: 500;
+}
+
+/* ==========================================
+   LIENS CTF
+   ========================================== */
+
+.ctf-link {
+    display: inline-flex;
+    align-items: center;
+    gap: 10px;
+    padding: 15px 30px;
+    background: linear-gradient(135deg, var(--primary-color), rgba(18, 118, 158, 0.8));
+    color: white;
+    text-decoration: none;
+    border-radius: 50px;
+    font-weight: 600;
+    font-size: 14px;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+    transition: all 0.3s ease;
+    border: 2px solid transparent;
+    position: relative;
+    overflow: hidden;
+    margin-top: 20px;
+}
+
+.ctf-link::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: -100%;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.2), transparent);
+    transition: left 0.5s ease;
+}
+
+.ctf-link:hover::before {
+    left: 100%;
+}
+
+.ctf-link:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 10px 30px rgba(18, 118, 158, 0.4);
+    border-color: rgba(255, 255, 255, 0.2);
+}
+
+.ctf-link i {
+    transition: transform 0.3s ease;
+}
+
+.ctf-link:hover i {
+    transform: translateX(3px);
+}
+
+/* ==========================================
+   COULEURS SPÉCIFIQUES PAR PLATEFORME
+   ========================================== */
+
+.ctf-card[data-platform="rootme"]:hover .ctf-logo {
+    background: linear-gradient(135deg, #ff6b6b, #ee5a52);
+    box-shadow: 0 15px 40px rgba(255, 107, 107, 0.4);
+}
+
+.ctf-card[data-platform="rootme"]:hover .metric-value {
+    color: #ff6b6b;
+    text-shadow: 0 0 20px rgba(255, 107, 107, 0.5);
+}
+
+.ctf-card[data-platform="rootme"]:hover .ctf-link {
+    background: linear-gradient(135deg, #ff6b6b, #ee5a52);
+}
+
+.ctf-card[data-platform="thm"]:hover .ctf-logo {
+    background: linear-gradient(135deg, #00d4aa, #00b894);
+    box-shadow: 0 15px 40px rgba(0, 212, 170, 0.4);
+}
+
+.ctf-card[data-platform="thm"]:hover .metric-value {
+    color: #00d4aa;
+    text-shadow: 0 0 20px rgba(0, 212, 170, 0.5);
+}
+
+.ctf-card[data-platform="thm"]:hover .ctf-link {
+    background: linear-gradient(135deg, #00d4aa, #00b894);
+}
+
+.ctf-card[data-platform="htb"]:hover .ctf-logo {
+    background: linear-gradient(135deg, #9fef00, #8bc34a);
+    box-shadow: 0 15px 40px rgba(159, 239, 0, 0.4);
+}
+
+.ctf-card[data-platform="htb"]:hover .metric-value {
+    color: #9fef00;
+    text-shadow: 0 0 20px rgba(159, 239, 0, 0.5);
+}
+
+.ctf-card[data-platform="htb"]:hover .ctf-link {
+    background: linear-gradient(135deg, #9fef00, #8bc34a);
+}
+
+/* ==========================================
+   PIED DE PAGE
+   ========================================== */
+
+.pied-de-page {
+    background-color: var(--background-darker);
+    margin-top: 80px;
+    padding-top: 15px;
+    position: relative;
+    z-index: 10;
+    color: #fff;
+    text-align: center;
+    border-top: 1px solid #ffffff1a;
+}
+
+.pied-de-page div.contenu-bas {
+    font-family: 'Source Code Pro', monospace;
+    padding: 20px 40px;
+    max-width: 1200px;
+    margin: auto;
+    position: relative;
+    z-index: 10;
+    color: #ffffff5a;
+    font-size: 12px;
+}
+
+.fait-avec i { 
+    color: red; 
+}
+
+.fait-avec span {
+    text-decoration: none;
+    color: var(--primary-color);
+    font-weight: bold;
+}
+
+.fait-avec a {
+    color: var(--primary-color);
+    text-decoration: none;
+    transition: all 0.3s ease;
+}
+
+.fait-avec a:hover {
+    color: #26a4d6;
+    text-shadow: 0 0 10px rgba(18, 118, 158, 0.5);
+}

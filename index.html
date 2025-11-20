@@ -8,7 +8,13 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;700&family=VT323&display=swap"
         rel="stylesheet">
-    <link rel="stylesheet" href="css/main.css">
+
+    <link rel="stylesheet" href="css/base.css">
+    <link rel="stylesheet" href="css/header.css">
+    <link rel="stylesheet" href="css/home.css">
+    <link rel="stylesheet" href="css/about-skills.css">
+    <link rel="stylesheet" href="css/experience-projects.css">
+    <link rel="stylesheet" href="css/ctf-footer.css">
 
     <title>PORTFOLIO CH4TBL4NC</title>
 </head>
@@ -23,14 +29,16 @@
     <header class="en-tete">
         <i class="fa-solid fa-shield-halved fa-2x"></i>
         <nav>
-            <a href="">01. <span>About</span></a>
-            <a href="">02. <span>Skill</span></a>
-            <a href="">03. <span>Work</span></a>
+            <a href="#home">01. <span>Home</span></a>
+            <a href="#about">02. <span>About Me</span></a>
+            <a href="#skill">03. <span>Skill</span></a>
+            <a href="#experience">04. <span>Experience</span></a>
+            <a href="#projets">05. <span>Projets</span></a>
             <a href="" class="resume">Contact</a>
         </nav>
     </header>
 
-    <section class="section-principale">
+    <section id="home" class="section-principale">
         <div class="contenu-principal">
             <p>Salut, je suis</p>
             <h1>Ch4t Bl4nc</h1>
@@ -41,7 +49,7 @@
                 Mon objectif est de développer mes compétences techniques et de contribuer à la protection des systèmes
                 informatiques contre les menaces croissantes.
             </p>
-            <a href="" class="bouton">Voir mes projet</a>
+            <a href="#projets" class="bouton">Voir mes projet</a>
         </div>
         <div class="carte-profil">
             <img src="https://tse1.explicit.bing.net/th/id/OIP.3doSIz_LdHlCbOAZ7ogKLQAAAA?cb=ucfimg2ucfimg=1&w=170&h=177&rs=1&pid=ImgDetMain&o=7&rm=3"
@@ -49,16 +57,802 @@
             <h3>Ch4t Bl4nc</h3>
             <p class="role">Etudiant — Guardia Cybersecurity School</p>
 
+
+
             <ul class="reseaux-sociaux">
                 <li><a href="https://discordapp.com/users/1421478562392834171" aria-label="Discord"><i
-                            class="fa-brands fa-discord"></i>0xchatblanc</a></li>
+                            class="fa-brands fa-discord"></i>ch4tbl4nc</a></li>
                 <li><a href="https://x.com/0xch4tbl4nc" aria-label="X"><i class="fa-brands fa-x-twitter"></i>
                         @ch4tbl4nc</a></li>
                 <li><a href="https://github.com/ch4tbl4nc" aria-label="GitHub"><i class="fa-brands fa-github"></i>
-                        0xchatblanc</a></li>
-                <li><a href="https://linkedin.com/in/maël-d-b96868386" aria-label="LinkedIn"><i
-                            class="fa-brands fa-linkedin"></i> M______ D.</a></li>
+                        ch4tbl4nc</a></li>
+                <li><a href="https://linkedin.com/in/" aria-label="LinkedIn"><i
+                            class="fa-brands fa-linkedin"></i>ch4tbl4nc</a></li>
             </ul>
+        </div>
+    </section>
+
+    <section class="section-ctf" id="ctf">
+        <div class="container">
+            <div class="section-header">
+                <span class="section-number">01.</span>
+                <h2 class="section-title">CTF Platforms</h2>
+                <div class="title-line"></div>
+            </div>
+
+            <div class="ctf-grid">
+                <div class="ctf-card" data-platform="rootme">
+                    <div class="ctf-card-bg"></div>
+                    <div class="ctf-card-content">
+                        <div class="ctf-logo">
+                            <i class="fa-solid fa-terminal"></i>
+                        </div>
+                        <div class="ctf-details">
+                            <h3 class="platform-title">Root-Me</h3>
+                            <div class="ctf-metrics">
+                                <div class="metric">
+                                    <span class="metric-value">20+</span>
+                                    <span class="metric-label">Challenges</span>
+                                </div>
+                                <div class="metric">
+                                    <span class="metric-value">300+</span>
+                                    <span class="metric-label">Points</span>
+                                </div>
+                            </div>
+                            <a href="https://www.root-me.org/" class="ctf-link" target="_blank">
+                                <span>Voir le profil</span>
+                                <i class="fa-solid fa-external-link-alt"></i>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="ctf-card" data-platform="thm">
+                    <div class="ctf-card-bg"></div>
+                    <div class="ctf-card-content">
+                        <div class="ctf-logo">
+                            <i class="fa-solid fa-flag"></i>
+                        </div>
+                        <div class="ctf-details">
+                            <h3 class="platform-title">TryHackMe</h3>
+                            <div class="ctf-metrics">
+                                <div class="metric">
+                                    <span class="metric-value">10014#</span>
+                                    <span class="metric-label">Ranking</span>
+                                </div>
+                                <div class="metric">
+                                    <span class="metric-value">35+</span>
+                                    <span class="metric-label">Rooms</span>
+                                </div>
+                            </div>
+                            <a href="https://tryhackme.com/" class="ctf-link" target="_blank">
+                                <span>Voir le profil</span>
+                                <i class="fa-solid fa-external-link-alt"></i>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="ctf-card" data-platform="htb">
+                    <div class="ctf-card-bg"></div>
+                    <div class="ctf-card-content">
+                        <div class="ctf-logo">
+                            <i class="fa-solid fa-cube"></i>
+                        </div>
+                        <div class="ctf-details">
+                            <h3 class="platform-title">HackTheBox</h3>
+                            <div class="ctf-metrics">
+                                <div class="metric">
+                                    <span class="metric-value">Hacker</span>
+                                    <span class="metric-label">Rank</span>
+                                </div>
+                                <div class="metric">
+                                    <span class="metric-value">15+</span>
+                                    <span class="metric-label">Machines</span>
+                                </div>
+                            </div>
+                            <a href="https://app.hackthebox.com/" class="ctf-link" target="_blank">
+                                <span>Voir le profil</span>
+                                <i class="fa-solid fa-external-link-alt"></i>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="about" class="section-global">
+        <div class="section-container">
+            <div class="section-header">
+                <span class="section-number">02.</span>
+                <h2 class="section-title">About Me</h2>
+                <div class="title-line"></div>
+            </div>
+
+            <div class="section-content">
+                <div class="about-text">
+                    <div class="text-block">
+                        <p class="highlight-text">
+                            Passionné par la <span class="glow-text">cybersécurité</span>,
+                            je me consacre à l'apprentissage continu des technologies de sécurité.
+                        </p>
+                        <p>
+                            Actuellement étudiant à <strong>Guardia Cybersecurity School</strong>, je développe mes
+                            compétences
+                            en analyse de vulnérabilités, forensic numérique et développement sécurisé. Mon approche
+                            combine
+                            une solide base technique avec une compréhension approfondie des enjeux de la cybersécurité.
+                        </p>
+                    </div>
+
+                    <div class="competences-rapides">
+                        <h3>Domaines d'expertise</h3>
+                        <div class="tags-container">
+                            <span class="tag" data-category="security">Pentesting</span>
+                            <span class="tag" data-category="security">OSINT</span>
+                            <span class="tag" data-category="network">Networking</span>
+                            <span class="tag" data-category="dev">DevOps</span>
+                            <span class="tag" data-category="system">Linux</span>
+                            <span class="tag" data-category="security">Forensic</span>
+                            <span class="tag" data-category="dev">Scripting</span>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="about-visual">
+                    <div class="stats-grid">
+                        <div class="stat-card" data-stat="1">
+                            <div class="stat-icon">
+                                <i class="fa-solid fa-graduation-cap"></i>
+                            </div>
+                            <div class="stat-content">
+                                <h4>Formation</h4>
+                                <p class="stat-value">1ère année</p>
+                                <p class="stat-label">Guardia School</p>
+                            </div>
+                            <div class="stat-glow"></div>
+                        </div>
+
+                        <div class="stat-card" data-stat="2">
+                            <div class="stat-icon">
+                                <i class="fa-solid fa-terminal"></i>
+                            </div>
+                            <div class="stat-content">
+                                <h4>HACKING</h4>
+                                <p class="stat-value">CTF</p>
+                                <p class="stat-label">Chasseur de flags</p>
+                            </div>
+                            <div class="stat-glow"></div>
+                        </div>
+                        <div class="stat-card" data-stat="3">
+                            <div class="stat-icon">
+                                <i class="fa-solid fa-magnifying-glass"></i>
+                            </div>
+                            <div class="stat-content">
+                                <h4>RENSEIGNEMENT</h4>
+                                <p class="stat-value">OSINT</p>
+                                <p class="stat-label">Chasseur d'infos</p>
+                            </div>
+                            <div class="stat-glow"></div>
+                        </div>
+                    </div>
+
+                    <div class="terminal-container">
+                        <div class="terminal-header">
+                            <div class="terminal-buttons">
+                                <span class="btn-close"></span>
+                                <span class="btn-minimize"></span>
+                                <span class="btn-maximize"></span>
+                            </div>
+                            <span class="terminal-title">root@ch4tbl4nc:~$</span>
+                        </div>
+                        <div class="terminal-body">
+                            <div class="terminal-line">
+                                <span class="prompt">┌──(root㉿ch4tbl4nc)-[~]</span>
+                            </div>
+                            <div class="terminal-line">
+                                <span class="prompt">└─$</span>
+                                <span class="command">cat about.json</span>
+                            </div>
+                            <div class="terminal-output">
+                                {<br>
+                                &nbsp;&nbsp;<span class="json-key">"name"</span>: <span class="json-value">"Ch4t
+                                    Bl4nc"</span>,<br>
+                                &nbsp;&nbsp;<span class="json-key">"role"</span>: <span class="json-value">"Guardia
+                                    Student"</span>,<br>
+                                &nbsp;&nbsp;<span class="json-key">"school"</span>: <span class="json-value">"Guardia
+                                    Cybersecurity School"</span>,<br>
+                                &nbsp;&nbsp;<span class="json-key">"interests"</span>: [<br>
+                                &nbsp;&nbsp;&nbsp;&nbsp;<span class="json-value">"Pentesting"</span>,<br>
+                                &nbsp;&nbsp;&nbsp;&nbsp;<span class="json-value">"OSINT"</span>,<br>
+                                &nbsp;&nbsp;&nbsp;&nbsp;<span class="json-value">"Ethical Hacking"</span><br>
+                                &nbsp;&nbsp;],<br>
+                                }
+                            </div>
+                            <div class="terminal-line">
+                                <span class="prompt">└─$</span>
+                                <span class="command typing-cursor">_</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="skill" class="section-global">
+        <div class="section-container">
+            <div class="section-header">
+                <span class="section-number">03.</span>
+                <h2 class="section-title">Skill</h2>
+                <div class="title-line"></div>
+            </div>
+            <div class="section-content">
+                <div class="skill-competences">
+                    <h3>Cartographie de compétences</h3>
+                    <div class="skills-summary">
+                        <div class="skills-metrics">
+                            <div class="metric-card">
+                                <span class="metric-label">Domaines clés</span>
+                                <span class="metric-value">4</span>
+                                <p>OSINT, Forensic, Offensive, DevSecOps</p>
+                            </div>
+                            <div class="metric-card">
+                                <span class="metric-label">Challenges & CTF</span>
+                                <span class="metric-value">35+</span>
+                                <p>TryHackMe, Root-Me</p>
+                            </div>
+                            <div class="metric-card">
+                                <span class="metric-label">Techs & outils</span>
+                                <span class="metric-value">25</span>
+                                <p>Scripts, analyse, automatisation et monitoring</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="skills-domains">
+                        <article class="skill-domain">
+                            <div class="domain-header"><i class="fa-solid fa-globe"></i>
+                                <h4>Web Security</h4>
+                            </div>
+                            <p>Exploitation de vulnérabilités web et sécurisation d'applications.</p>
+                            <ul>
+                                <li><i class="fa-solid fa-check"></i>XSS (Stored, Reflected, DOM-based)</li>
+                                <li><i class="fa-solid fa-check"></i>Injection SQL (Union, Blind, Time-based)</li>
+                                <li><i class="fa-solid fa-check"></i>CSRF, SSRF, XXE et path traversal</li>
+                                <li><i class="fa-solid fa-check"></i>Bypass WAF et contournement de filtres</li>
+                            </ul>
+                        </article>
+
+                        <article class="skill-domain">
+                            <div class="domain-header"><i class="fa-solid fa-network-wired"></i>
+                                <h4>Network Security</h4>
+                            </div>
+                            <p>Analyse et exploitation des protocoles réseau et infrastructures.</p>
+                            <ul>
+                                <li><i class="fa-solid fa-check"></i>Scan de ports et énumération de services</li>
+                                <li><i class="fa-solid fa-check"></i>Exploitation SMB, FTP, SSH et protocoles réseau
+                                </li>
+                                <li><i class="fa-solid fa-check"></i>VLAN hopping et attaques ARP/DHCP</li>
+                                <li><i class="fa-solid fa-check"></i>Pivoting et tunneling post-exploitation</li>
+                            </ul>
+                        </article>
+
+                        <article class="skill-domain">
+                            <div class="domain-header"><i class="fa-solid fa-search"></i>
+                                <h4>OSINT & Reconnaissance</h4>
+                            </div>
+                            <p>Collecte passive d'informations et investigation numérique.</p>
+                            <ul>
+                                <li><i class="fa-solid fa-check"></i>Recherche sur réseaux sociaux et leak databases
+                                </li>
+                                <li><i class="fa-solid fa-check"></i>Géolocalisation et analyse d'images (EXIF)</li>
+                                <li><i class="fa-solid fa-check"></i>Domain enumeration et DNS reconnaissance</li>
+                                <li><i class="fa-solid fa-check"></i>Email harvesting et profiling de cibles</li>
+                            </ul>
+                        </article>
+
+                        <article class="skill-domain">
+                            <div class="domain-header"><i class="fa-solid fa-code"></i>
+                                <h4>Reverse Engineering</h4>
+                            </div>
+                            <p>Analyse statique et dynamique de binaires et malwares.</p>
+                            <ul>
+                                <li><i class="fa-solid fa-check"></i>Désassemblage x86/x64 avec IDA et Ghidra</li>
+                                <li><i class="fa-solid fa-check"></i>Analyse d'APK Android avec JADX et apktool</li>
+                                <li><i class="fa-solid fa-check"></i>Déobfuscation de code JavaScript et Python</li>
+                                <li><i class="fa-solid fa-check"></i>Cracking de binaires et bypass de protections</li>
+                            </ul>
+                        </article>
+                    </div>
+
+                    <div class="skills-split">
+                        <div class="skills-detail">
+                            <h4>Piliers techniques</h4>
+                            <div class="skills-groups">
+                                <div class="skills-group-card">
+                                    <span>Offensif</span>
+                                    <strong>Pentest & CTF</strong>
+                                    <ul>
+                                        <li>Burp Suite · Nmap</li>
+                                        <li>SQLMap · XSS/XXE</li>
+                                        <li>Escalade de privilèges Win/Linux</li>
+                                    </ul>
+                                </div>
+                                <div class="skills-group-card">
+                                    <span>Reconnaissance</span>
+                                    <strong>OSINT & Investigation</strong>
+                                    <ul>
+                                        <li>Sherlock · TheHarvester</li>
+                                        <li>Maltego · Shodan · ExifTool</li>
+                                        <li>Google Dorking & Social Engineering</li>
+                                    </ul>
+                                </div>
+                                <div class="skills-group-card">
+                                    <span>Défensif</span>
+                                    <strong>Forensic & Analyse</strong>
+                                    <ul>
+                                        <li>Wireshark · Volatility</li>
+                                        <li>Autopsy · JADX</li>
+                                        <li>Analyse de logs & corrélation</li>
+                                    </ul>
+                                </div>
+                                <div class="skills-group-card">
+                                    <span>Développement</span>
+                                    <strong>Code & DevSecOps</strong>
+                                    <ul>
+                                        <li>Python · JavaScript · Java</li>
+                                        <li>Docker · CI/CD GitHub Actions</li>
+                                        <li>HTML/CSS · SQL · Bash</li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+
+                        <aside class="skills-knowledge">
+                            <h4>Connaissances complémentaires</h4>
+                            <div class="knowledge-list">
+                                <div class="knowledge-item">
+                                    <strong>Protocoles & Réseaux</strong>
+                                    <p>Analyse TCP/IP, segmentation VLAN, configuration VPN et durcissement pare-feu.
+                                        Administration pfSense et configuration de règles de firewall avancées.</p>
+                                </div>
+                                <div class="knowledge-item">
+                                    <strong>Sécurité applicative</strong>
+                                    <p>Modélisation des menaces, revue de code ciblée, sécurisation d'API REST, gestion
+                                        des secrets.</p>
+                                </div>
+                                <div class="knowledge-item">
+                                    <strong>Culture cybersécurité</strong>
+                                    <p>OWASP ASVS, MITRE ATT&CK, méthodologie EBIOS.</p>
+                                </div>
+                            </div>
+                        </aside>
+                    </div>
+
+                    <div class="skills-timeline">
+                        <h4>Parcours & réalisations</h4>
+                        <div class="timeline-items">
+                            <div class="timeline-item timeline-right" data-category="education">
+                                <div class="timeline-circle">
+                                    <div class="timeline-icon">
+                                        <i class="fa-solid fa-user-graduate"></i>
+                                    </div>
+                                </div>
+                                <div class="timeline-content">
+                                    <span>2025 - présent</span>
+                                    <h5>Guardia Cybersecurity School · Bachelor 1</h5>
+                                    <p>Formation spécialisée en cybersécurité : pentest, forensic, analyse de malwares
+                                        et gouvernance de la sécurité.</p>
+                                    <div class="timeline-tags">
+                                        <span class="tag">Pentest</span>
+                                        <span class="tag">Forensic</span>
+                                        <span class="tag">Malwares</span>
+                                        <span class="tag">Gouvernance</span>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="timeline-item timeline-left" data-category="practice">
+                                <div class="timeline-circle">
+                                    <div class="timeline-icon">
+                                        <i class="fa-solid fa-trophy"></i>
+                                    </div>
+                                </div>
+                                <div class="timeline-content">
+                                    <span>2023</span>
+                                    <h5>Intensification CTF · Root-Me & challenges avancés</h5>
+                                    <p>Résolution de 30+ challenges : crypto, reverse engineering, forensic et
+                                        exploitation de binaires.</p>
+                                    <div class="timeline-tags">
+                                        <span class="tag">Crypto</span>
+                                        <span class="tag">Reverse engineering</span>
+                                        <span class="tag">Forensic</span>
+                                        <span class="tag">Binaires</span>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="timeline-item timeline-right" data-category="learning">
+                                <div class="timeline-circle">
+                                    <div class="timeline-icon">
+                                        <i class="fa-solid fa-laptop-code"></i>
+                                    </div>
+                                </div>
+                                <div class="timeline-content">
+                                    <span>2022 - 2023</span>
+                                    <h5>Apprentissage TryHackMe · Fondamentaux cybersécurité Pre Security &
+                                        pathway-introtocyber</h5>
+                                    <p>Maîtrise des bases : reconnaissance réseau, exploitation web (SQLi, XSS) et
+                                        post-exploitation Linux/Windows.</p>
+                                    <div class="timeline-tags">
+                                        <span class="tag">Reconnaissance réseau</span>
+                                        <span class="tag">SQLi</span>
+                                        <span class="tag">XSS</span>
+                                        <span class="tag">Linux/Windows</span>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="timeline-item timeline-left" data-category="osint">
+                                <div class="timeline-circle">
+                                    <div class="timeline-icon">
+                                        <i class="fa-solid fa-search"></i>
+                                    </div>
+                                </div>
+                                <div class="timeline-content">
+                                    <span>2020</span>
+                                    <h5>Découverte OSINT · Techniques d'investigation</h5>
+                                    <p>Développement de compétences en collecte d'informations : géolocalisation,
+                                        analyse EXIF et recherche passive.</p>
+                                    <div class="timeline-tags">
+                                        <span class="tag">Géolocalisation</span>
+                                        <span class="tag">Analyse EXIF</span>
+                                        <span class="tag">Recherche passive</span>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="timeline-item timeline-right" data-category="foundation">
+                                <div class="timeline-circle">
+                                    <div class="timeline-icon">
+                                        <i class="fa-solid fa-shield"></i>
+                                    </div>
+                                </div>
+                                <div class="timeline-content">
+                                    <span>2019</span>
+                                    <h5>Initiation cybersécurité · Première sensibilisation</h5>
+                                    <p>Découverte des concepts fondamentaux : modèle OSI, protocoles réseau, sécurité
+                                        réseau et bonnes pratiques.</p>
+                                    <div class="timeline-tags">
+                                        <span class="tag">Modèle OSI</span>
+                                        <span class="tag">Protocoles réseau</span>
+                                        <span class="tag">Sécurité réseau</span>
+                                        <span class="tag">Bonnes pratiques</span>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="timeline-item timeline-left" data-category="development">
+                                <div class="timeline-circle">
+                                    <div class="timeline-icon">
+                                        <i class="fa-solid fa-code"></i>
+                                    </div>
+                                </div>
+                                <div class="timeline-content">
+                                    <span>2018</span>
+                                    <h5>Premiers pas en développement · Bases techniques</h5>
+                                    <p>Apprentissage Python et scripting : automatisation de tâches, projets personnels
+                                        et fondations techniques.</p>
+                                    <div class="timeline-tags">
+                                        <span class="tag">Python</span>
+                                        <span class="tag">Scripting</span>
+                                        <span class="tag">Automatisation</span>
+                                        <span class="tag">Projets personnels</span>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="skills-tools">
+                        <h4>Écosystème outils & plateformes</h4>
+                        <div class="tool-grid">
+                            <div class="tool-category">
+                                <div class="tool-header"><span>Offensive & Reconnaissance</span><i
+                                        class="fa-solid fa-crosshairs"></i></div>
+                                <div class="tool-tags">
+                                    <span>Burp Suite</span>
+                                    <span>Metasploit</span>
+                                    <span>SQLMap</span>
+                                    <span>Nmap</span>
+                                    <span>Gobuster</span>
+                                </div>
+                            </div>
+                            <div class="tool-category">
+                                <div class="tool-header"><span>Cyber Défense & Forensic</span><i
+                                        class="fa-solid fa-microscope"></i></div>
+                                <div class="tool-tags">
+                                    <span>Wireshark</span>
+                                    <span>Volatility</span>
+                                    <span>Autopsy</span>
+                                    <span>JADX</span>
+                                </div>
+                            </div>
+                            <div class="tool-category">
+                                <div class="tool-header"><span>DevSecOps & Automatisation</span><i
+                                        class="fa-solid fa-gears"></i></div>
+                                <div class="tool-tags">
+                                    <span>Docker</span>
+                                    <span>Git & GitHub</span>
+                                    <span>Python</span>
+                                    <span>Bash</span>
+                                </div>
+                            </div>
+                            <div class="tool-category">
+                                <div class="tool-header"><span>Plateformes d'entraînement</span><i
+                                        class="fa-solid fa-trophy"></i></div>
+                                <div class="tool-tags">
+                                    <span>TryHackMe</span>
+                                    <span>Root-Me</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="experience" class="section-global">
+        <div class="section-container">
+            <div class="section-header">
+                <span class="section-number">04.</span>
+                <h2 class="section-title">Experience</h2>
+                <div class="title-line"></div>
+            </div>
+
+            <div class="experience-content">
+                <div class="experience-timeline">
+                    <div class="timeline-track"></div>
+
+                    <div class="experience-item" data-year="2025">
+                        <div class="experience-date">
+                            <span class="year">2025</span>
+                            <span class="month">Sept - Présent</span>
+                        </div>
+                        <div class="experience-card">
+                            <div class="experience-header">
+                                <div class="company-info">
+                                    <h3>Étudiant en Cybersécurité</h3>
+                                    <span class="company">Guardia Cybersecurity School</span>
+                                </div>
+                                <div class="experience-icon">
+                                    <i class="fa-solid fa-graduation-cap"></i>
+                                </div>
+                            </div>
+                            <p class="experience-description">
+                                Formation spécialisée en cybersécurité avec focus sur le pentesting, l'analyse
+                                forensique,
+                                et la sécurisation des infrastructures. Participation active aux challenges CTF et
+                                projets pratiques.
+                            </p>
+                            <div class="experience-skills">
+                                <span class="skill-tag">Pentest</span>
+                                <span class="skill-tag">Forensic</span>
+                                <span class="skill-tag">CTF</span>
+                                <span class="skill-tag">Sécurité réseau</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="experience-item" data-year="2024">
+                        <div class="experience-date">
+                            <span class="year">2024</span>
+                            <span class="month">Juin - Août</span>
+                        </div>
+                        <div class="experience-card">
+                            <div class="experience-header">
+                                <div class="company-info">
+                                    <h3>Stage Développeur Junior</h3>
+                                    <span class="company">Entreprise Tech</span>
+                                </div>
+                                <div class="experience-icon">
+                                    <i class="fa-solid fa-code"></i>
+                                </div>
+                            </div>
+                            <p class="experience-description">
+                                Développement d'applications web sécurisées, implémentation de bonnes pratiques
+                                DevSecOps,
+                                et participation aux audits de sécurité des applications internes.
+                            </p>
+                            <div class="experience-skills">
+                                <span class="skill-tag">Python</span>
+                                <span class="skill-tag">JavaScript</span>
+                                <span class="skill-tag">DevSecOps</span>
+                                <span class="skill-tag">Docker</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="experience-item" data-year="2023">
+                        <div class="experience-date">
+                            <span class="year">2023</span>
+                            <span class="month">Été</span>
+                        </div>
+                        <div class="experience-card">
+                            <div class="experience-header">
+                                <div class="company-info">
+                                    <h3>Freelance OSINT</h3>
+                                    <span class="company">Projets personnels</span>
+                                </div>
+                                <div class="experience-icon">
+                                    <i class="fa-solid fa-search"></i>
+                                </div>
+                            </div>
+                            <p class="experience-description">
+                                Réalisation d'investigations OSINT pour diverses missions, développement d'outils
+                                d'automatisation pour la collecte d'informations et formation aux techniques de
+                                recherche.
+                            </p>
+                            <div class="experience-skills">
+                                <span class="skill-tag">OSINT</span>
+                                <span class="skill-tag">Investigation</span>
+                                <span class="skill-tag">Automation</span>
+                                <span class="skill-tag">Python</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="experience-item" data-year="2022">
+                        <div class="experience-date">
+                            <span class="year">2022</span>
+                            <span class="month">Déc - Fév</span>
+                        </div>
+                        <div class="experience-card">
+                            <div class="experience-header">
+                                <div class="company-info">
+                                    <h3>Assistant IT</h3>
+                                    <span class="company">PME locale</span>
+                                </div>
+                                <div class="experience-icon">
+                                    <i class="fa-solid fa-laptop"></i>
+                                </div>
+                            </div>
+                            <p class="experience-description">
+                                Support technique, maintenance des systèmes informatiques, sensibilisation
+                                à la cybersécurité auprès des employés et mise en place de bonnes pratiques.
+                            </p>
+                            <div class="experience-skills">
+                                <span class="skill-tag">Support IT</span>
+                                <span class="skill-tag">Maintenance</span>
+                                <span class="skill-tag">Sensibilisation</span>
+                                <span class="skill-tag">Sécurité</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="projets" class="section-global">
+        <div class="section-container">
+            <div class="section-header">
+                <span class="section-number">05.</span>
+                <h2 class="section-title">Projets</h2>
+                <div class="title-line"></div>
+            </div>
+
+            <div class="projects-content">
+                <div class="projects-grid">
+                    <div class="project-card" data-category="security">
+                        <div class="project-image">
+                            <img src="https://via.placeholder.com/400x200/12769E/ffffff?text=VulnScan"
+                                alt="VulnScan">
+                            <div class="project-overlay">
+                                <i class="fa-solid fa-search"></i>
+                            </div>
+                        </div>
+                        <div class="project-content">
+                            <div class="project-header">
+                                <h3>VulnScan </h3>
+                                <div class="project-category">
+                                    <i class="fa-solid fa-shield-halved"></i>
+                                    <span>Analysis</span>
+                                </div>
+                            </div>
+                            <p class="project-description">
+                                VulnScan is a powerful asynchronous network vulnerability scanner that combines port
+                                scanning, service detection, and vulnerability analysis using multiple security APIs.
+                            </p>
+                            <div class="project-tech">
+                                <span class="tech-tag">Python</span>
+                                <span class="tech-tag">Vulnerability Analysis</span>
+                                <span class="tech-tag">API</span>
+                                <span class="tech-tag">Shodan</span>
+                                <span class="tech-tag">CLI</span>
+                            </div>
+                            <div class="project-actions">
+                                <a href="https://github.com/ch4tbl4nc/VulnScan" class="project-btn primary"
+                                    target="_blank">
+                                    <i class="fa-brands fa-github"></i>
+                                    <span>Voir le projet</span>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="project-card" data-category="forensic">
+                        <div class="project-image">
+                            <img src="https://via.placeholder.com/400x200/FF9800/ffffff?text=PASSWORD+MANAGER"
+                                alt="Password Manager">
+                            <div class="project-overlay">
+                                <i class="fa-solid fa-chart-line"></i>
+                            </div>
+                        </div>
+                        <div class="project-content">
+                            <div class="project-header">
+                                <h3>Password Manager</h3>
+                                <div class="project-category">
+                                    <i class="fa-solid fa-magnifying-glass-chart"></i>
+                                    <span>cryptography</span>
+                                </div>
+                            </div>
+                            <p class="project-description">
+                                Password-Manager is an interactive command-line interface (CLI) tool designed to
+                                securely store and manage sensitive information. It utilizes robust encryption
+                                techniques to ensure data confidentiality and integrity.
+                            </p>
+                            <div class="project-tech">
+                                <span class="tech-tag">Python</span>
+                                <span class="tech-tag">bcrypt</span>
+                                <span class="tech-tag">CLI</span>
+                                <span class="tech-tag">cryptography.fernet</span>
+                            </div>
+                            <div class="project-actions">
+                                <a href="https://github.com/ch4tbl4nc/Password-Manager" class="project-btn primary"
+                                    target="_blank">
+                                    <i class="fa-brands fa-github"></i>
+                                    <span>Voir le code</span>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="project-card" data-category="automation">
+                        <div class="project-image">
+                            <img src="https://via.placeholder.com/400x200/9C27B0/ffffff?text=WHOIS-TOOL"
+                                alt="WHOIS-Tool">
+                            <div class="project-overlay">
+                                <i class="fa-solid fa-robot"></i>
+                            </div>
+                        </div>
+                        <div class="project-content">
+                            <div class="project-header">
+                                <h3>WHOIS-Tool</h3>
+                                <div class="project-category">
+                                    <i class="fa-solid fa-gears"></i>
+                                    <span>Lookup</span>
+                                </div>
+                            </div>
+                            <p class="project-description">
+                                WHOIS Tool is a highly advanced asynchronous Python-based tool designed for performing
+                                efficient WHOIS lookups. It incorporates modern Python features such as dataclasses,
+                                caching, and multi-threading via a thread pool for enhanced performance and scalability.
+                            </p>
+                            <div class="project-tech">
+                                <span class="tech-tag">CLI</span>
+                                <span class="tech-tag">Python</span>
+                                <span class="tech-tag">Lookup</span>
+                                <span class="tech-tag">IP</span>
+                            </div>
+                            <div class="project-actions">
+                                <a href="https://github.com/ch4tbl4nc/WHOIS-Tool" class="project-btn primary" target="_blank">
+                                    <i class="fa-brands fa-github"></i>
+                                    <span>Voir le code</span>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
         </div>
     </section>
 
@@ -71,6 +865,10 @@
             </div>
         </div>
     </footer>
+
+    <script src="js/cursor.js"></script>
+    <script src="js/particles.js"></script>
+    <script src="js/animations.js"></script>
 
     <script src="js/main.js"></script>
 </body>

@@ -1,0 +1,246 @@
+/* ==========================================
+   VARIABLES CSS GLOBALES
+   ========================================== */
+
+:root {
+    /* Couleurs principales */
+    --primary-color: #12769E;
+    --background-color: #05141c;
+    --background-darker: #041219;
+    --text-color: #ffffff;
+    --text-accent: #043775;
+    --text-secondary: rgba(255, 255, 255, 0.8);
+    --text-muted: rgba(255, 255, 255, 0.6);
+    
+    /* Couleurs d'accentuation */
+    --border-primary: rgba(18, 118, 158, 0.3);
+    --border-secondary: rgba(18, 118, 158, 0.2);
+    --glow-primary: rgba(18, 118, 158, 0.5);
+    --glow-secondary: rgba(18, 118, 158, 0.3);
+    
+    /* Espacement */
+    --spacing-xs: 8px;
+    --spacing-sm: 12px;
+    --spacing-md: 20px;
+    --spacing-lg: 30px;
+    --spacing-xl: 40px;
+    --spacing-xxl: 60px;
+    
+    /* Typographie */
+    --font-primary: 'Orbitron', sans-serif;
+    --font-secondary: 'Courier New', monospace;
+    --font-mono: Consolas, Monaco, 'Lucida Console', 'Courier New', monospace;
+    --font-size-xs: 11px;
+    --font-size-sm: 13px;
+    --font-size-md: 15px;
+    --font-size-lg: 18px;
+    --font-size-xl: 24px;
+    --font-size-xxl: 32px;
+    
+    /* Bordures et rayons */
+    --border-radius-sm: 12px;
+    --border-radius-md: 15px;
+    --border-radius-lg: 20px;
+    --border-radius-xl: 24px;
+    
+    /* Ombres */
+    --shadow-sm: 0 5px 15px rgba(18, 118, 158, 0.3);
+    --shadow-md: 0 10px 30px rgba(18, 118, 158, 0.2);
+    --shadow-lg: 0 15px 40px rgba(18, 118, 158, 0.25);
+    
+    /* Transitions */
+    --transition-fast: 0.3s ease;
+    --transition-slow: 0.4s ease;
+    --transition-smooth: 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+/* ==========================================
+   RESET CSS ET STYLES DE BASE
+   ========================================== */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    background-color: var(--background-color);
+    color: var(--text-color);
+    overflow-x: hidden;
+    line-height: 1.6;
+}
+
+/* ==========================================
+   GRILLE DE FOND CYBERPUNK
+   ========================================== */
+
+body::before {
+    content: '';
+    position: fixed;
+    top: -50%;
+    left: 0;
+    width: 100%;
+    height: 200%;
+    background:
+        linear-gradient(90deg, rgba(18, 118, 158, 0.05) 1px, transparent 1px),
+        linear-gradient(rgba(18, 118, 158, 0.05) 1px, transparent 1px);
+    background-size: 50px 50px;
+    pointer-events: none;
+    z-index: 0;
+    animation: gridScroll 1s linear infinite;
+}
+
+@keyframes gridScroll {
+    0% { transform: translateY(0); }
+    100% { transform: translateY(50px); }
+}
+
+/* ==========================================
+   CONTENEUR DES PARTICULES
+   ========================================== */
+
+.particules {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    pointer-events: none;
+    z-index: 2;
+    overflow: hidden;
+}
+
+.particule {
+    position: absolute;
+    width: 4px;
+    height: 4px;
+    background: var(--primary-color);
+    border-radius: 50%;
+    opacity: 0;
+    animation: remontee 15s infinite linear;
+    box-shadow: 0 0 6px var(--primary-color);
+    bottom: -10px;
+}
+
+@keyframes remontee {
+    0% { transform: translateY(0) translateX(0); opacity: 0; }
+    10% { opacity: 0.8; }
+    90% { opacity: 0.8; }
+    100% { transform: translateY(-100vh) translateX(50px); opacity: 0; }
+}
+
+/* ==========================================
+   STYLES GÉNÉRIQUES ET UTILITAIRES
+   ========================================== */
+
+.section-global {
+    max-width: 1200px;
+    margin: 120px auto 0;
+    padding: 0 var(--spacing-xl);
+    position: relative;
+    z-index: 10;
+}
+
+.section-container {
+    width: 100%;
+}
+
+.section-header {
+    display: flex;
+    align-items: center;
+    gap: var(--spacing-md);
+    margin-bottom: var(--spacing-xxl);
+}
+
+.section-number {
+    font-family: var(--font-secondary);
+    font-size: var(--font-size-xl);
+    color: var(--primary-color);
+    font-weight: bold;
+}
+
+.section-title {
+    font-family: var(--font-primary);
+    font-size: var(--font-size-xxl);
+    color: var(--text-color);
+    margin: 0;
+    white-space: nowrap;
+}
+
+.title-line {
+    flex-grow: 1;
+    height: 2px;
+    background: linear-gradient(90deg, var(--primary-color), transparent);
+    box-shadow: 0 0 10px var(--primary-color);
+}
+
+/* ==========================================
+   ANIMATIONS DE BASE
+   ========================================== */
+
+@keyframes descente {
+    from { opacity: 0; transform: translateY(-50px); }
+    to { opacity: 1; transform: translateY(0); }
+}
+
+@keyframes entree-gauche {
+    from { opacity: 0; transform: translateX(-100px); }
+    to { opacity: 1; transform: translateX(0); }
+}
+
+@keyframes apparition {
+    from { opacity: 0; }
+    to { opacity: 1; }
+}
+
+@keyframes pulse {
+    0%, 100% { filter: drop-shadow(0 0 10px rgba(18,118,158,.302)); }
+    50% { filter: drop-shadow(0 0 20px rgba(18,118,158,.8)); }
+}
+
+@keyframes soulignement {
+    0%, 100% { width: 100%; }
+    50% { width: 25%; }
+}
+
+@keyframes apparition-carte {
+    from { opacity: 0; scale: 0; }
+    to { opacity: 1; scale: 1; }
+}
+
+@keyframes flottement-avatar {
+    0%, 100% { transform: translateY(0); }
+    50% { transform: translateY(-7px); }
+}
+
+@keyframes montee {
+    from { opacity: 0; transform: translateY(20px); }
+    to { opacity: 1; transform: translateY(0); }
+}
+
+@keyframes slideInUp {
+    from { opacity: 0; transform: translateY(30px); }
+    to { opacity: 1; transform: translateY(0); }
+}
+
+@keyframes fadeIn {
+    from { opacity: 0; }
+    to { opacity: 1; }
+}
+
+@keyframes tagPop {
+    from { opacity: 0; transform: scale(0.5); }
+    to { opacity: 1; transform: scale(1); }
+}
+
+@keyframes statCardAppear {
+    from { opacity: 0; transform: scale(0.8) rotateZ(-5deg); }
+    to { opacity: 1; transform: scale(1) rotateZ(0deg); }
+}
+
+@keyframes blink {
+    0%, 49% { opacity: 1; }
+    50%, 100% { opacity: 0; }
+}
