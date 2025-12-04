@@ -507,3 +507,221 @@
     border-color: rgba(76, 175, 80, 0.3);
     color: #4CAF50;
 }
+
+/* ==========================================
+   MEDIA QUERIES RESPONSIVE - EXPERIENCE & PROJETS
+   ========================================== */
+
+@media screen and (max-width: 1024px) {
+    .experience-content {
+        max-width: 100%;
+    }
+
+    .timeline-track {
+        left: 30px;
+    }
+
+    .experience-item {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 15px;
+    }
+
+    .experience-item::before {
+        left: 30px;
+        top: 10px;
+    }
+
+    .experience-date {
+        width: auto;
+        flex-direction: row;
+        align-items: center;
+        gap: 10px;
+        padding-left: 60px;
+        padding-right: 0;
+        text-align: left;
+    }
+
+    .experience-card {
+        margin-left: 60px;
+        width: calc(100% - 60px);
+    }
+
+    .experience-card::after {
+        display: none;
+    }
+
+    .projects-grid {
+        grid-template-columns: repeat(2, 1fr);
+        gap: var(--spacing-md);
+    }
+}
+
+@media screen and (max-width: 768px) {
+    .experience-timeline {
+        padding: var(--spacing-md) 0;
+    }
+
+    .timeline-track {
+        left: 20px;
+        width: 3px;
+    }
+
+    .experience-item {
+        margin-bottom: var(--spacing-xl);
+    }
+
+    .experience-item::before {
+        left: 20px;
+        width: 16px;
+        height: 16px;
+        border-width: 3px;
+    }
+
+    .experience-date {
+        padding-left: 50px;
+    }
+
+    .experience-date .year {
+        font-size: var(--font-size-lg);
+    }
+
+    .experience-date .month {
+        font-size: 10px;
+    }
+
+    .experience-card {
+        margin-left: 50px;
+        width: calc(100% - 50px);
+        padding: var(--spacing-md);
+        border-radius: var(--border-radius-lg);
+    }
+
+    .experience-header {
+        flex-direction: column;
+        gap: 15px;
+    }
+
+    .experience-icon {
+        width: 40px;
+        height: 40px;
+        font-size: 16px;
+        align-self: flex-start;
+    }
+
+    .company-info h3 {
+        font-size: var(--font-size-md);
+    }
+
+    .experience-description {
+        font-size: var(--font-size-sm);
+    }
+
+    .experience-skills {
+        gap: 6px;
+    }
+
+    .skill-tag {
+        padding: 3px 10px;
+        font-size: 10px;
+    }
+
+    .projects-grid {
+        grid-template-columns: 1fr;
+        gap: var(--spacing-md);
+    }
+
+    .project-card {
+        border-radius: var(--border-radius-lg);
+    }
+
+    .project-image {
+        height: 100px;
+    }
+
+    .project-content {
+        padding: var(--spacing-sm);
+    }
+
+    .project-header {
+        flex-direction: column;
+        gap: 10px;
+    }
+
+    .project-category {
+        align-self: flex-start;
+    }
+
+    .project-actions {
+        flex-direction: column;
+    }
+
+    .project-btn {
+        padding: 10px 15px;
+    }
+}
+
+@media screen and (max-width: 480px) {
+    .timeline-track {
+        left: 15px;
+    }
+
+    .experience-item::before {
+        left: 15px;
+        width: 14px;
+        height: 14px;
+    }
+
+    .experience-date {
+        padding-left: 40px;
+    }
+
+    .experience-date .year {
+        font-size: 16px;
+    }
+
+    .experience-card {
+        margin-left: 40px;
+        width: calc(100% - 40px);
+        padding: 15px;
+    }
+
+    .company-info h3 {
+        font-size: 14px;
+    }
+
+    .company-info .company {
+        font-size: 11px;
+    }
+
+    .experience-description {
+        font-size: 12px;
+        line-height: 1.6;
+    }
+
+    .project-header h3 {
+        font-size: 14px;
+    }
+
+    .project-description {
+        font-size: 11px;
+    }
+
+    .project-tech {
+        gap: 3px;
+    }
+
+    .tech-tag {
+        padding: 2px 5px;
+        font-size: 9px;
+    }
+
+    .project-btn {
+        padding: 8px 12px;
+        font-size: 11px;
+    }
+
+    .project-overlay i {
+        font-size: 36px;
+    }
+}

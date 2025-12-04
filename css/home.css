@@ -10,7 +10,7 @@
     margin: auto;
     perspective: 1000px;
     position: relative;
-    z-index: 10;
+    z-index: 5;
     gap: 40px;
 }
 
@@ -262,4 +262,135 @@
 .carte-profil .reseaux-sociaux a:hover i {
     transform: scale(1.2) rotate(360deg);
     filter: drop-shadow(0 0 10px var(--primary-color));
+}
+
+/* ==========================================
+   MEDIA QUERIES RESPONSIVE - HOME
+   ========================================== */
+
+@media screen and (max-width: 1024px) {
+    .section-principale {
+        flex-direction: column;
+        align-items: center;
+        padding-top: 50px;
+        gap: 30px;
+    }
+
+    .contenu-principal {
+        text-align: center;
+        max-width: 100%;
+    }
+
+    .contenu-principal h1 {
+        font-size: 48px;
+    }
+
+    .contenu-principal h2 {
+        font-size: 24px;
+    }
+
+    .contenu-principal p.paragraphe {
+        max-width: 100%;
+        margin: 0 auto;
+    }
+
+    .carte-profil {
+        width: 100%;
+        max-width: 350px;
+    }
+}
+
+@media screen and (max-width: 768px) {
+    .section-principale {
+        padding-top: 30px;
+        padding-left: 15px;
+        padding-right: 15px;
+    }
+
+    .contenu-principal h1 {
+        font-size: 36px;
+    }
+
+    .contenu-principal h2 {
+        font-size: 18px;
+    }
+
+    .contenu-principal h2 br {
+        display: none;
+    }
+
+    .contenu-principal p {
+        font-size: 16px;
+    }
+
+    .contenu-principal p.paragraphe {
+        font-size: 14px;
+    }
+
+    .carte-profil {
+        width: 100%;
+        max-width: 320px;
+        padding: 20px;
+    }
+
+    .carte-profil .avatar {
+        width: 120px;
+        height: 120px;
+    }
+
+    .carte-profil h3 {
+        font-size: 18px;
+    }
+
+    .carte-profil .role {
+        font-size: 12px;
+    }
+
+    .carte-profil:hover {
+        transform: none;
+    }
+
+    .contenu-principal a.bouton {
+        padding: 12px 24px;
+        font-size: 14px;
+    }
+}
+
+@media screen and (max-width: 480px) {
+    .section-principale {
+        padding-top: 20px;
+    }
+
+    .contenu-principal h1 {
+        font-size: 28px;
+    }
+
+    .contenu-principal h2 {
+        font-size: 16px;
+    }
+
+    .contenu-principal p.paragraphe {
+        font-size: 13px;
+        line-height: 1.6;
+    }
+
+    .carte-profil {
+        max-width: 100%;
+        padding: 18px;
+        border-radius: 18px;
+    }
+
+    .carte-profil .avatar {
+        width: 100px;
+        height: 100px;
+    }
+
+    .carte-profil .reseaux-sociaux a {
+        padding: 6px 10px;
+        font-size: 13px;
+    }
+
+    .carte-profil .reseaux-sociaux i {
+        font-size: 16px;
+    }
 }

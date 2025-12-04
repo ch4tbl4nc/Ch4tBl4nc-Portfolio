@@ -819,3 +819,346 @@
     border-color: var(--primary-color);
     transform: translateY(-2px);
 }
+
+/* ==========================================
+   MEDIA QUERIES RESPONSIVE - ABOUT & SKILLS
+   ========================================== */
+
+@media screen and (max-width: 1024px) {
+    .section-content {
+        grid-template-columns: 1fr;
+        gap: var(--spacing-xl);
+    }
+
+    .stats-grid {
+        grid-template-columns: repeat(3, 1fr);
+        gap: var(--spacing-sm);
+    }
+
+    .skills-metrics {
+        grid-template-columns: repeat(3, 1fr);
+        gap: var(--spacing-sm);
+    }
+
+    .skills-domains {
+        grid-template-columns: repeat(2, 1fr);
+        gap: var(--spacing-md);
+    }
+
+    .skills-split {
+        grid-template-columns: 1fr;
+        gap: var(--spacing-lg);
+    }
+
+    .skills-groups {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    .timeline-items::before {
+        left: 40px;
+    }
+
+    .timeline-item {
+        flex-direction: row;
+        justify-content: flex-start;
+    }
+
+    .timeline-left,
+    .timeline-right {
+        justify-content: flex-start;
+        text-align: left;
+    }
+
+    .timeline-circle {
+        left: 40px;
+        width: 60px;
+        height: 60px;
+    }
+
+    .timeline-icon {
+        width: 40px;
+        height: 40px;
+        font-size: 16px;
+    }
+
+    .timeline-content {
+        width: calc(100% - 100px);
+        margin-left: 80px !important;
+        margin-right: 0 !important;
+    }
+
+    .timeline-left .timeline-content::after,
+    .timeline-right .timeline-content::after {
+        left: -10px;
+        right: auto;
+        border-right: none;
+        border-top: none;
+        border-left: inherit;
+        border-bottom: inherit;
+    }
+
+    .tool-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+@media screen and (max-width: 768px) {
+    .stats-grid {
+        grid-template-columns: 1fr;
+        gap: var(--spacing-sm);
+    }
+
+    .stat-card {
+        padding: var(--spacing-sm);
+    }
+
+    .stat-icon {
+        width: 50px;
+        height: 50px;
+        font-size: 20px;
+    }
+
+    .skills-metrics {
+        grid-template-columns: 1fr;
+        gap: var(--spacing-sm);
+    }
+
+    .metric-card {
+        padding: var(--spacing-sm);
+    }
+
+    .skills-domains {
+        grid-template-columns: 1fr;
+    }
+
+    .skill-domain {
+        padding: var(--spacing-md);
+    }
+
+    .skills-groups {
+        grid-template-columns: 1fr;
+    }
+
+    .skills-group-card {
+        padding: 18px;
+    }
+
+    .skills-detail,
+    .skills-knowledge,
+    .skills-timeline,
+    .skills-tools {
+        padding: 20px;
+        border-radius: 18px;
+    }
+
+    .skills-detail h4,
+    .skills-knowledge h4,
+    .skills-timeline h4,
+    .skills-tools h4 {
+        font-size: 18px;
+        margin-bottom: 18px;
+    }
+
+    .terminal-container {
+        border-radius: var(--border-radius-sm);
+    }
+
+    .terminal-body {
+        padding: 12px;
+        min-height: 150px;
+        font-size: 12px;
+    }
+
+    .timeline-items::before {
+        left: 25px;
+    }
+
+    .timeline-circle {
+        left: 25px;
+        width: 50px;
+        height: 50px;
+    }
+
+    .timeline-icon {
+        width: 35px;
+        height: 35px;
+        font-size: 14px;
+    }
+
+    .timeline-content {
+        width: calc(100% - 80px);
+        margin-left: 60px !important;
+        padding: 20px;
+    }
+
+    .timeline-item h5 {
+        font-size: 16px;
+    }
+
+    .timeline-item p {
+        font-size: 13px;
+    }
+
+    .timeline-tags {
+        gap: 6px;
+    }
+
+    .timeline-tags .tag {
+        font-size: 9px;
+        padding: 3px 8px;
+    }
+
+    .tool-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .tool-category {
+        padding: 18px;
+    }
+
+    .tags-container {
+        gap: 8px;
+    }
+
+    .tag {
+        padding: 6px 12px;
+        font-size: 12px;
+    }
+
+    .competences-rapides h3 {
+        font-size: 16px;
+    }
+}
+
+@media screen and (max-width: 480px) {
+    .highlight-text {
+        font-size: 15px !important;
+    }
+
+    .text-block p {
+        font-size: 13px;
+    }
+
+    .stat-card {
+        padding: 12px;
+    }
+
+    .stat-icon {
+        width: 45px;
+        height: 45px;
+        font-size: 18px;
+    }
+
+    .stat-content h4 {
+        font-size: 13px;
+    }
+
+    .stat-value {
+        font-size: 16px;
+    }
+
+    .metric-value {
+        font-size: 24px;
+    }
+
+    .skill-domain {
+        padding: 15px;
+    }
+
+    .domain-header h4 {
+        font-size: 15px;
+    }
+
+    .skill-domain > p {
+        font-size: 12px;
+    }
+
+    .skill-domain li {
+        font-size: 12px;
+    }
+
+    .skills-detail,
+    .skills-knowledge,
+    .skills-timeline,
+    .skills-tools {
+        padding: 15px;
+        border-radius: 15px;
+    }
+
+    .skills-group-card {
+        padding: 15px;
+    }
+
+    .skills-group-card strong {
+        font-size: 14px;
+    }
+
+    .skills-group-card ul {
+        font-size: 12px;
+    }
+
+    .knowledge-item {
+        padding: 14px;
+    }
+
+    .knowledge-item strong {
+        font-size: 14px;
+    }
+
+    .knowledge-item p {
+        font-size: 12px;
+    }
+
+    .timeline-items::before {
+        left: 20px;
+    }
+
+    .timeline-circle {
+        left: 20px;
+        width: 40px;
+        height: 40px;
+    }
+
+    .timeline-icon {
+        width: 28px;
+        height: 28px;
+        font-size: 12px;
+    }
+
+    .timeline-content {
+        width: calc(100% - 60px);
+        margin-left: 50px !important;
+        padding: 15px;
+        border-radius: 16px;
+    }
+
+    .timeline-content::after {
+        display: none;
+    }
+
+    .timeline-item span {
+        font-size: 10px;
+        padding: 4px 10px;
+    }
+
+    .timeline-item h5 {
+        font-size: 14px;
+    }
+
+    .timeline-item p {
+        font-size: 12px;
+    }
+
+    .tool-category {
+        padding: 15px;
+    }
+
+    .tool-header span {
+        font-size: 13px;
+    }
+
+    .tool-tags span {
+        font-size: 10px;
+        padding: 3px 6px;
+    }
+}

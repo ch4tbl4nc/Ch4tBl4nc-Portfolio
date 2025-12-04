@@ -26,6 +26,9 @@ class CyberPortfolio {
         
         console.log('🚀 Initialisation du Portfolio Cyberpunk...');
         
+        // Initialiser le menu mobile immédiatement (priorité)
+        this.initMobileMenu();
+        
         // Vérifier que tous les modules sont disponibles
         this.waitForModules().then(() => {
             this.initializeAllModules();
@@ -115,6 +118,72 @@ class CyberPortfolio {
         
         // Mode debug
         this.initDebugMode();
+        
+        // Le menu mobile est déjà initialisé dans start()
+    }
+
+    // ==========================================
+    // MENU MOBILE RESPONSIVE
+    // ==========================================
+    
+    initMobileMenu() {
+        // Éviter l'initialisation multiple
+        if (this.mobileMenuInitialized) return;
+        this.mobileMenuInitialized = true;
+        
+        const menuToggle = document.querySelector('.menu-toggle');
+        const nav = document.querySelector('nav');
+        const navOverlay = document.querySelector('.nav-overlay');
+        const navLinks = document.querySelectorAll('nav a');
+
+        if (!menuToggle || !nav) {
+            console.warn('⚠️ Menu mobile: éléments non trouvés');
+            return;
+        }
+
+        console.log('📱 Menu mobile initialisé');
+
+        // Toggle du menu
+        menuToggle.addEventListener('click', (e) => {
+            e.preventDefault();
+            e.stopPropagation();
+            menuToggle.classList.toggle('active');
+            nav.classList.toggle('active');
+            if (navOverlay) navOverlay.classList.toggle('active');
+            document.body.style.overflow = nav.classList.contains('active') ? 'hidden' : '';
+        });
+
+        // Fermer le menu en cliquant sur l'overlay
+        if (navOverlay) {
+            navOverlay.addEventListener('click', () => {
+                menuToggle.classList.remove('active');
+                nav.classList.remove('active');
+                navOverlay.classList.remove('active');
+                document.body.style.overflow = '';
+            });
+        }
+
+        // Fermer le menu en cliquant sur un lien
+        navLinks.forEach(link => {
+            link.addEventListener('click', () => {
+                if (window.innerWidth <= 768) {
+                    menuToggle.classList.remove('active');
+                    nav.classList.remove('active');
+                    if (navOverlay) navOverlay.classList.remove('active');
+                    document.body.style.overflow = '';
+                }
+            });
+        });
+
+        // Fermer le menu si on redimensionne la fenêtre
+        window.addEventListener('resize', () => {
+            if (window.innerWidth > 768) {
+                menuToggle.classList.remove('active');
+                nav.classList.remove('active');
+                if (navOverlay) navOverlay.classList.remove('active');
+                document.body.style.overflow = '';
+            }
+        });
     }
 
     // ==========================================

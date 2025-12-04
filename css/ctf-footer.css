@@ -312,3 +312,169 @@
     color: #26a4d6;
     text-shadow: 0 0 10px rgba(18, 118, 158, 0.5);
 }
+
+/* ==========================================
+   MEDIA QUERIES RESPONSIVE - CTF & FOOTER
+   ========================================== */
+
+@media screen and (max-width: 1024px) {
+    .section-ctf {
+        padding: 0 15px;
+    }
+
+    .ctf-grid {
+        grid-template-columns: repeat(2, 1fr);
+        gap: 25px;
+        padding: 0;
+    }
+
+    .ctf-card {
+        padding: 30px 20px;
+    }
+
+    .ctf-logo {
+        width: 70px;
+        height: 70px;
+        font-size: 28px;
+    }
+
+    .platform-title {
+        font-size: 20px;
+    }
+
+    .metric-value {
+        font-size: 24px;
+    }
+
+    .ctf-link {
+        padding: 12px 24px;
+        font-size: 13px;
+    }
+}
+
+@media screen and (max-width: 768px) {
+    .section-ctf {
+        margin-top: 3vh;
+    }
+
+    .section-ctf .section-header {
+        margin-bottom: 50px;
+    }
+
+    .ctf-grid {
+        grid-template-columns: 1fr;
+        gap: 20px;
+        max-width: 400px;
+    }
+
+    .ctf-card {
+        padding: 25px 20px;
+        border-radius: 16px;
+    }
+
+    .ctf-card:hover {
+        transform: translateY(-8px);
+    }
+
+    .ctf-logo {
+        width: 60px;
+        height: 60px;
+        font-size: 24px;
+        margin-bottom: 20px;
+        border-radius: 15px;
+    }
+
+    .platform-title {
+        font-size: 18px;
+        margin-bottom: 20px;
+    }
+
+    .ctf-metrics {
+        margin: 20px 0;
+        gap: 15px;
+    }
+
+    .metric-value {
+        font-size: 22px;
+    }
+
+    .metric-label {
+        font-size: 11px;
+    }
+
+    .ctf-link {
+        padding: 12px 20px;
+        font-size: 12px;
+        margin-top: 15px;
+    }
+
+    .pied-de-page {
+        margin-top: 50px;
+        padding-top: 10px;
+    }
+
+    .pied-de-page div.contenu-bas {
+        padding: 15px 20px;
+        font-size: 11px;
+    }
+}
+
+@media screen and (max-width: 480px) {
+    .section-ctf {
+        padding: 0 10px;
+    }
+
+    .section-ctf .section-header {
+        margin-bottom: 30px;
+    }
+
+    .ctf-grid {
+        max-width: 100%;
+    }
+
+    .ctf-card {
+        padding: 20px 15px;
+    }
+
+    .ctf-logo {
+        width: 50px;
+        height: 50px;
+        font-size: 20px;
+        margin-bottom: 15px;
+        border-radius: 12px;
+    }
+
+    .platform-title {
+        font-size: 16px;
+        margin-bottom: 15px;
+    }
+
+    .ctf-metrics {
+        margin: 15px 0;
+        flex-direction: row;
+        gap: 10px;
+    }
+
+    .metric-value {
+        font-size: 20px;
+    }
+
+    .metric-label {
+        font-size: 10px;
+    }
+
+    .ctf-link {
+        padding: 10px 18px;
+        font-size: 11px;
+        border-radius: 30px;
+    }
+
+    .pied-de-page div.contenu-bas {
+        padding: 12px 15px;
+        font-size: 10px;
+    }
+
+    .fait-avec {
+        margin-top: 8px;
+    }
+}

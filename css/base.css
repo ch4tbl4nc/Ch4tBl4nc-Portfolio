@@ -244,3 +244,94 @@ body::before {
     0%, 49% { opacity: 1; }
     50%, 100% { opacity: 0; }
 }
+
+/* ==========================================
+   MEDIA QUERIES RESPONSIVE - BASE
+   ========================================== */
+
+/* Tablettes et petits écrans */
+@media screen and (max-width: 1024px) {
+    :root {
+        --spacing-xl: 30px;
+        --spacing-xxl: 40px;
+        --font-size-xxl: 28px;
+        --font-size-xl: 20px;
+    }
+
+    .section-global {
+        padding: 0 var(--spacing-md);
+        margin-top: 80px;
+    }
+
+    .section-header {
+        flex-wrap: wrap;
+        gap: var(--spacing-sm);
+    }
+
+    .section-title {
+        font-size: var(--font-size-xl);
+        white-space: normal;
+    }
+
+    .title-line {
+        flex-basis: 100%;
+        order: 3;
+        margin-top: var(--spacing-sm);
+    }
+}
+
+/* Mobiles */
+@media screen and (max-width: 768px) {
+    :root {
+        --spacing-lg: 20px;
+        --spacing-xl: 25px;
+        --spacing-xxl: 30px;
+        --font-size-xxl: 24px;
+        --font-size-xl: 18px;
+        --font-size-lg: 16px;
+    }
+
+    body::before {
+        background-size: 30px 30px;
+    }
+
+    .section-global {
+        padding: 0 15px;
+        margin-top: 60px;
+    }
+
+    .section-header {
+        margin-bottom: var(--spacing-lg);
+    }
+
+    .section-number {
+        font-size: var(--font-size-lg);
+    }
+
+    .section-title {
+        font-size: var(--font-size-lg);
+    }
+
+    /* Cacher le curseur personnalisé sur mobile */
+    .curseur,
+    .suiveur-curseur {
+        display: none;
+    }
+}
+
+/* Très petits écrans */
+@media screen and (max-width: 480px) {
+    :root {
+        --spacing-md: 15px;
+        --spacing-lg: 18px;
+        --font-size-xxl: 20px;
+        --font-size-xl: 16px;
+        --font-size-lg: 14px;
+        --font-size-md: 13px;
+    }
+
+    .section-global {
+        padding: 0 12px;
+        margin-top: 40px;
+    }
+}
